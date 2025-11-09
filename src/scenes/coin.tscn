@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6wyaaph2aqk0"]
+
+[ext_resource type="Texture2D" uid="uid://bld04ohvwgyeb" path="res://src/assets/sprites/Coin.png" id="1_lxd6r"]
+
+[node name="Coin" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.48543513, 0.9481173, 0.27233952, 1)
+texture = ExtResource("1_lxd6r")
