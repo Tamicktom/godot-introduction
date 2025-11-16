@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd6iw5r8liylh"]
+
+[ext_resource type="PackedScene" uid="uid://bton0j2u5goys" path="res://src/entities/player.tscn" id="1_8382g"]
+[ext_resource type="Script" uid="uid://vpq2f63dpqa0" path="res://src/entities/Player.cs" id="2_aeljn"]
+
+[node name="Vectors" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_8382g")]
+position = Vector2(108, 103)
+script = ExtResource("2_aeljn")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(557, 302)

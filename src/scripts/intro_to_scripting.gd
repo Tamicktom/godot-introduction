@@ -8,13 +8,17 @@ var highest_altitude:float = 1_234.34;
 var land_locket:bool = false;
 
 var dict: Dictionary = {
-  "banana": "banana"
+	"banana": "banana"
 };
 
 func _ready():
-  print(score);
-  print(country_name);
-  print(population);
-  print(highest_altitude);
-  print(land_locket);
-  print(dict);
+	print(score);
+	print(country_name);
+	print(population);
+	print(highest_altitude);
+	print(land_locket);
+	print(dict);
+	score += 10;
+	print(score);
+	if(score > 10):
+		print("score é maior do que 10");
