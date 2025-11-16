@@ -20,7 +20,12 @@ public partial class Player : CharacterBody2D
 		// Position = new Vector2((this.Position.X + 1) * (float)delta, this.Position.Y);
 		// GD.Print("Position: " + this.Position, "Delta: " + delta);
 
-		this.Velocity = new Vector2(1, 0) * Speed;
-		this.MoveAndSlide();
+		// this.Velocity = new Vector2(1, 0) * Speed;
+		// this.MoveAndSlide();
+
+		Vector2 direction = new(1, 1);
+		Position += direction * Speed * (float)delta;
+
+		GD.Print("Position: " + this.Position, "Delta: " + delta);
 	}
 }
