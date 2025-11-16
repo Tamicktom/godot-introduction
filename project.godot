@@ -15,6 +15,10 @@ run/main_scene="uid://c5pj8n112sk6p"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[dotnet]
+
+project/assembly_name="godot-introduction"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

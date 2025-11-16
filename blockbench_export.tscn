@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cga47w1v40md3"]
+
+[ext_resource type="PackedScene" uid="uid://btwbehfdxa6s4" path="res://src/objects/cadeira/cadeira.gltf" id="1_02iw0"]
+
+[node name="blockbench_export" instance=ExtResource("1_02iw0")]
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "default"

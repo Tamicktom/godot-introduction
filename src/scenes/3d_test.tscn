@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cf8csb63d2ofa"]
+[gd_scene load_steps=10 format=3 uid="uid://cf8csb63d2ofa"]
 
 [ext_resource type="Material" uid="uid://dnl6843qp2pb4" path="res://src/materials/my-first-material.tres" id="1_w0lka"]
 [ext_resource type="PackedScene" uid="uid://n4yod7cemui3" path="res://src/entities/gardevoir/scene.gltf" id="2_f2gxy"]
 [ext_resource type="PackedScene" uid="uid://c6yrt3yvafw03" path="res://src/entities/pikachu/scene.gltf" id="3_6v5l1"]
 [ext_resource type="PackedScene" uid="uid://b1ql7e4mwxjkc" path="res://src/objects/pokeball/scene.gltf" id="4_lkmuc"]
 [ext_resource type="PackedScene" uid="uid://ddnyy3cy06a3w" path="res://src/entities/zoey/scene.gltf" id="5_hv5nq"]
+[ext_resource type="PackedScene" uid="uid://cga47w1v40md3" path="res://blockbench_export.tscn" id="6_syupy"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_3cpss"]
 
@@ -15,6 +16,7 @@
 [node name="Node3D" type="Node3D"]
 
 [node name="Snowman" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.1994596)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Snowman"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5133077, 0)
@@ -59,6 +61,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9416237, 2.0534441, -0.2891
 light_color = Color(0.101960786, 1, 0.22745098, 1)
 light_energy = 2.182
 shadow_enabled = true
+omni_range = 6.4025254
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("2_f2gxy")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.6224031, 0, 1.4340686)
@@ -70,4 +73,7 @@ transform = Transform3D(-0.025, 0, -2.1855695e-09, 0, 0.025, 0, 2.1855695e-09, 0
 transform = Transform3D(-0.025, 0, -2.1855695e-09, 0, 0.025, 0, 2.1855695e-09, 0, -0.025, 1.2376118, 1.0381801, -0.18392658)
 
 [node name="Sketchfab_Scene4" parent="." instance=ExtResource("5_hv5nq")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.744225, 0.31988978, -1.1321955)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.8217726, 0.31988978, 3.2831397)
+
+[node name="blockbench_export" parent="." instance=ExtResource("6_syupy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.98442507, 0.3523409, 0.33492672)
