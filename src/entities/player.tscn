@@ -6,13 +6,11 @@
 radius = 20.5
 height = 66.0
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_2lfla")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 4)
 shape = SubResource("CapsuleShape2D_2lfla")
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Sprite2D/CollisionShape2D"]

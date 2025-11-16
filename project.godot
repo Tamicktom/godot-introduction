@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 project/assembly_name="godot-introduction"
 
+[physics]
+
+common/physics_jitter_fix=0.0
+common/physics_interpolation=true
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

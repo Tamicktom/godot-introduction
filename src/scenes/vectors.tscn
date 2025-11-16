@@ -6,7 +6,7 @@
 [node name="Vectors" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_8382g")]
-position = Vector2(108, 103)
+position = Vector2(136, 103)
 script = ExtResource("2_aeljn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
