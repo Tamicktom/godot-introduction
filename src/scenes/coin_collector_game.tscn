@@ -1,20 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://bx1v8kvk75iej"]
 
-[ext_resource type="Script" uid="uid://d4mkjgy360wmq" path="res://src/scenes/player.cs" id="1_78dji"]
-[ext_resource type="Texture2D" uid="uid://bjiwm2bglqx2g" path="res://src/assets/sprites/Player.png" id="1_k3txt"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_78dji"]
-radius = 20.0
-height = 64.0
+[ext_resource type="Script" uid="uid://c2llgphtskof7" path="res://src/scenes/CoinCollectorGame.cs" id="1_aapvm"]
+[ext_resource type="PackedScene" uid="uid://bton0j2u5goys" path="res://src/entities/player.tscn" id="1_k3txt"]
+[ext_resource type="Texture2D" uid="uid://bld04ohvwgyeb" path="res://src/assets/sprites/Coin.png" id="2_78dji"]
 
 [node name="CoinCollectorGame" type="Node2D"]
+script = ExtResource("1_aapvm")
 
-[node name="Player" type="CharacterBody2D" parent="."]
-script = ExtResource("1_78dji")
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Player" type="Sprite2D" parent="Player"]
-texture = ExtResource("1_k3txt")
+[node name="Player" parent="." instance=ExtResource("1_k3txt")]
+position = Vector2(-116, -4)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(-1, 5)
-shape = SubResource("CapsuleShape2D_78dji")
+[node name="Coin" type="Sprite2D" parent="."]
+position = Vector2(-277, -129)
+texture = ExtResource("2_78dji")

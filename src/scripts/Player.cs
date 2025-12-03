@@ -5,7 +5,17 @@ namespace Game.Scripts;
 
 public partial class Player : CharacterBody2D
 {
-	public const float Speed = 300.0f;
+	[Export]
+	public float Speed { get; set; } = 100.0f;
+
+	[Export]
+	public int Score { get; set; } = 0;
+
+	public override void _Ready()
+	{
+		// add the player to the global group
+		GetTree().Root.AddToGroup("Player");
+	}
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -21,5 +31,16 @@ public partial class Player : CharacterBody2D
 		Velocity = direction * Speed;
 
 		MoveAndSlide();
+	}
+
+	public override void _Process(double delta)
+	{
+		// GD.Print("Score: " + Score);
+	}
+
+	public void AddScore(int value)
+	{
+		Score += value;
+		GD.Print("Score: " + Score);
 	}
 }
